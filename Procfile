@@ -1,1 +1,1 @@
-worker: python3.6 anime.py
+worker: python3 anime.py
