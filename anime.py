@@ -23,16 +23,16 @@ async def on_ready():
     print('--------')
     return await client.change_presence(game=discord.Game(name='Teleports behind you'))
 
+
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
 
     if message.content.startswith('$mlady'):
-        await client.send_message(message.channel, ':flower_playing_cards: :forsen1337: *teleports behind you* :spy:')
-        await client.send_message(message.channel, ',_._._._._._._._._|__________________________________________________________,')
-        await client.send_message(message.channel, '|_|_|_|_|_|_|_|_|_|_________________________________________________________/')
-        await client.send_message(message.channel, 'Nothing personal, kiddo :skull:')
+        return await client.send_message(message.channel,
+                                         ':flower_playing_cards: :forsen1337: *teleports behind you* :spy:')
+
 
 @client.command()
 async def square(number):
@@ -130,5 +130,6 @@ async def nippon(text):
     final += changeletter(text, legend)
 
     await client.say(final)
+
 
 client.run(TOKEN)
