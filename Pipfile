@@ -9,5 +9,4 @@ discord.py = "*"
 [dev-packages] # Here goes your package requirements for developing the application and its versions (which packaes you will use when developing the application)
 pylint = "*"
 
-[requires] # Here goes your required Python version.
-python_version = "3.6"
+[requires]
