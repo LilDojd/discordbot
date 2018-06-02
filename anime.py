@@ -24,16 +24,6 @@ async def on_ready():
     return await client.change_presence(game=discord.Game(name='Teleports behind you'))
 
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if message.content.startswith('$mlady'):
-        return await client.send_message(message.channel,
-                                         ':flower_playing_cards: :forsen1337: *teleports behind you* :spy:')
-
-
 @client.command()
 async def square(number):
     squared_value = int(number) * int(number)
