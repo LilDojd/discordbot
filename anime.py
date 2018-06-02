@@ -110,7 +110,10 @@ async def nippon(text):
                     letter = random.choice(dic.get(letter))
                     start += letter
             else:
-                start += letter
+                if letter == "-":
+                    start += " "
+                else:
+                    start += letter
         return start
 
     final = ""
