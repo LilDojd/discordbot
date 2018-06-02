@@ -103,8 +103,11 @@ async def nippon(text):
     def changeletter(string, dic):
         start = ""
         for letter in string:
-            letter = random.choice(dic.get(letter))
-            start += letter
+            if letter in dic:
+                letter = random.choice(dic.get(letter))
+                start += letter
+            else:
+                start += letter
         return start
 
     final = ""
