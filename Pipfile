@@ -3,10 +3,9 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-[packages] # Here goes your package requirements for running the application and its versions (which packages you will use when running the application).
-discord.py = "*"
+[packages]
+discord.py = "0.16.12"
 
-[dev-packages] # Here goes your package requirements for developing the application and its versions (which packaes you will use when developing the application)
-pylint = "*"
+[dev-packages]
 
 [requires]
