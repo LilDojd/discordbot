@@ -104,8 +104,11 @@ async def nippon(text):
         start = ""
         for letter in string:
             if letter in dic:
-                letter = random.choice(dic.get(letter))
-                start += letter
+                if letter == 'n':
+                    start += '卜丨'
+                else:
+                    letter = random.choice(dic.get(letter))
+                    start += letter
             else:
                 start += letter
         return start
